@@ -5,13 +5,13 @@
     <section class="cards-receitas">
         {% for recipes in recipes %}
             <div class="card">
-                <div class="card_imagem-receita">
+                <div class="card-imagem-receita" id="">
                     <img src="{{recipes.image}}" alt="{{recipes.title}}">
                 </div>
-                <div class="card_titulo-receita">
+                <div class="card-titulo-receita">
                     <p>{{recipes.title}}</p>
                 </div>
-                <div class="card_autor-receita">
+                <div class="card-autor-receita">
                     <p>{{recipes.author}}</p>
                 </div>
             </div>

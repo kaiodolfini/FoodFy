@@ -114,7 +114,6 @@ header {
 
 /*======== CARDS ========*/
 .cards-receitas{
-    position: relative;
     width: 100%;
     margin: 78px auto 73px auto;
     display: grid;
@@ -122,19 +121,19 @@ header {
     gap: 20px;
 }
 
-.card_imagem_receita img{
-    position: absolute;
+.card-imagem-receita img{
+    position: relative;
     width: 100%;
     border-radius: 15px;
 }
 
-.card_titulo_receita{
+.card-titulo-receita{
     font-size: 18px;
     color: var(--default-color);
     margin:20px 0 5px 0;
 }
 
-.card_autor_receita{
+.card-autor-receita{
     font-size: 14px;
     color: #777777;
 }
@@ -184,7 +183,7 @@ header {
 }
 
 
-/*======== MODAL ========*/
+/*======== MODAL ========
 
 .modal-overlay{
     position: fixed;
@@ -220,7 +219,7 @@ header {
     cursor: pointer;
 }
 
-/*======== MODAL.ACTIVE ========*/
+/*======== MODAL.ACTIVE ========
 
 .modal-overlay.active{
     opacity: 1;

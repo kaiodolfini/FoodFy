@@ -13,36 +13,33 @@ nunjucks.configure("views", {
     noCache: true
 })
 
-server.get("/", function(req, res){
-    return res.render("home" , {recipes: recipes})
+server.get("/", function (req, res) {
+    return res.render("home", { recipes: recipes })
 })
 
-server.get("/about", function(req, res){
+server.get("/about", function (req, res) {
     return res.render("about")
 })
 
-server.get("/recipes", function(req, res){
-    return res.render("recipes", {recipes: recipes})
+server.get("/recipes", function (req, res) {
+    return res.render("recipes", { recipes: recipes })
 })
 
 server.get("/recipes/:index", function (req, res) {
-    const recipes = []; // Array de receitas carregadas do data.js
     const recipeIndex = req.params.index;
-    const recipe = recipes.find(function (recipe) {
-        return recipe.index == recipeIndex
-    })
-    if (!recipe) {
+    const recipe = recipes[recipeIndex];
+    
+    if (!recipes) {
         return res.render("not-found")
     }
-  
-    return res.render("recipe", {recipes: recipes})
-  }) 
 
+    return res.render("recipe", { recipes: recipe })
+})
 
+server.use(function (req, res) {
+    return res.status(404).render("not-found");
+})
 
-
-
-
-server.listen(8080, function(){
+server.listen(8080, function () {
     console.log("Server is Running")
 })

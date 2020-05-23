@@ -1,8 +1,7 @@
 const cards = document.querySelectorAll(".card");
 
-for(let card of cards){
-    card.addEventListener("click", function(){
-        const recipeId = card.getAttribute("id")
-        window.location.href = `recipes/${recipeId}`        
+for (let i = 0; i < cards.length; i++) {
+    cards[i].addEventListener("click", function() {
+        window.location.href = `/recipes/${i}`
     })
 }
