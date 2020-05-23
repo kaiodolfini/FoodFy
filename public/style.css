@@ -1,0 +1,266 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+:root{
+    --default-color: #111111;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    bottom: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: white;
+}
+
+/*======== HEADER ========*/
+.wrap{
+    width: 67.1%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+.logo{
+    width: 120px;
+    position: absolute;
+    top: 40px;
+}
+
+.logo > img{
+    width: 6.5%;
+}
+
+.menu{  
+    float: left;  
+    position: absolute;
+    top: 3.8%;
+    left: 20%;
+}
+
+.menu > ul {
+    list-style: none;
+}
+
+.menu > ul > li{
+    display: inline;
+    padding: 15px;
+}
+
+.menu > ul > li > a{
+    text-decoration: none;
+    color: var(--default-color);
+}
+
+/*======== AS MELHORES RECEITAS ========*/
+.melhores-receitas{
+    position: relative;
+    background-color: #FBDFDB;
+    width: 100%;
+    height: 366px;
+    border-radius: 30px;
+}
+
+.melhores-receitas img {
+    position: absolute;
+    bottom: 0;
+    left: 624px;
+}
+
+.melhores-receitas h1{
+    position: absolute;
+    top: 117px;
+    left: 60px;
+    width: 316px;
+    height: 38px;
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: bold;
+}
+
+.melhores-receitas p{
+    position: absolute;
+    top: 165px;
+    left: 60px;
+    color: var(--default-color);
+    opacity: 70%;
+    width: 316px;
+    height: 84px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/*======== MAIS ACESSADAS ========*/
+.mais-acessadas{
+    position: relative;
+    left: 0;
+    top: 50px;
+    width: 174px;
+    height: 28px;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: bold;
+}
+
+/*======== CARDS ========*/
+.cards-receitas{
+    position: relative;
+    width: 100%;
+    margin: 78px auto 73px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card_imagem_receita img{
+    position: absolute;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card_titulo_receita{
+    font-size: 18px;
+    color: var(--default-color);
+    margin:20px 0 5px 0;
+}
+
+.card_autor_receita{
+    font-size: 14px;
+    color: #777777;
+}
+
+/*======== SOBRE ========*/
+.sobre{
+    position: relative;
+    padding: 13px 0 20px 0;
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--default-color);
+}
+.comeco{
+    position: relative;
+    padding: 30px 0 20px 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--default-color);
+}
+.receitas{
+    position: relative;
+    padding: 30px 0 20px 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--default-color);
+}
+.paragrafo1{
+    position: relative;
+    padding: 0 0 25px 0;
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+.paragrafo2{
+    position: relative;
+    padding: 0 0 10px 0;
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+.paragrafo3{
+    position: relative;
+    padding: 0 0 50px 0px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+
+
+/*======== MODAL ========*/
+
+.modal-overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    transition: all 300ms;
+}
+
+.modal{
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    width: 660px;
+    height: 413px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+
+#fechar{
+    position: absolute;
+    color: #999999;
+    font-size: 16px;
+    line-height: 26px;
+    right: 281px;
+    top: 364px;
+    cursor: pointer;
+}
+
+/*======== MODAL.ACTIVE ========*/
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility:visible;
+    transition: all 300ms;
+}
+
+.modal img{
+    position: relative;
+    width: 600px;
+    height: 200px;
+    margin: 30px 30px 20px 30px;
+    border-radius: 15px;
+}
+
+.modal #titulo{
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--default-color);
+}
+
+.modal #autor{
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+    color: #777777;
+}
+
+/*======== FOOTER ========*/
+footer{
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    background-color: #EEEEEE;
+    padding: 23px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+}
