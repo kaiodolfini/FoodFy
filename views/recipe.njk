@@ -1,18 +1,68 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-    <section class="rec">
-        <div class="card">
-            <div class="card-imagem-receita">
-                <img src="{{recipes.image}}" alt="{{recipes.title}}">
-            </div>
-            <div class="card-titulo-receita">
-                <p>{{recipes.title}}</p>
-            </div>
-            <div class="card-autor-receita">
-                <p>{{recipes.author}}</p>
-            </div>
-        </div>
-    </section>
+
+    <div class="recipe-image">
+        <img src="{{recipes.image}}" alt="{{recipes.title}}">
+    </div>
+
+    <div class="recipe-title">
+        <p>{{recipes.title}}</p>
+    </div>
+    <div class="recipe-author">
+        <p>por
+            {{recipes.author}}</p>
+    </div>
+
+    <div class="ingredients-title">
+        <ul>
+            <li class="title">
+                Ingredientes
+            </li>
+            <li id= "show-ingredients" class="show-hide" onClick="mostrar('ingredients')">
+                MOSTRAR
+            </li>
+        </ul>
+    </div>
+
+    <div class="ingredients hidden" id="ingredients">
+        {% for ingredient in recipes.ingredients %}
+            <li>{{ingredient}}</li>
+        {% endfor %}
+    </div>
+
+    <div class="preparation-title">
+        <ul>
+            <li class="title">
+                Modo de preparo
+            </li>
+            <li id= "show-preparation" class="show-hide">
+                MOSTRAR
+            </li>
+        </ul>
+    </div>
+
+    <div class="preparation hidden" id="preparation">
+        {% for preparation in recipes.preparation %}
+            <p>{{preparation}}</p>
+        {% endfor %}
+    </div>
+
+    <div class="information-title">
+        <ul>
+            <li class="title">
+                Informações adicionais
+            </li>
+            <li id= "show-information" class="show-hide" onClick = "mostrar(information)">
+                MOSTRAR
+            </li>
+        </ul>
+    </div>
+
+    <div class="information hidden" id="information">
+        <p>{{recipes.information}}</p>
+    </div>
+
+    <script src="scripts.js"></script>
 
 {% endblock %}

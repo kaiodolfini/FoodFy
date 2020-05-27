@@ -2,29 +2,32 @@
 
 {% block content %}
 
-    <div class="melhores-receitas">
+    <div class="the-best-recipes">
         <h1>As melhores receitas</h1>
         <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
         <img src="assets\chef.png" alt="img-chef">
     </div>
 
-    <div class="mais-acessadas">
+    <div class="most-accessed">
         <p>Mais acessadas</p>
     </div>
 
-    <section class="cards-receitas">
+    <section class="cards-recipes">
         {% for recipes in recipes %}
             <div class="card">
-                <div class="card_imagem-receita">
+                <div class="card-image-recipe">
                     <img src="{{recipes.image}}" alt="{{recipes.title}}">
                 </div>
-                <div class="card_titulo-receita">
+                <div class="card-title-recipe">
                     <p>{{recipes.title}}</p>
                 </div>
-                <div class="card_autor-receita">
-                    <p>{{recipes.author}}</p>
+                <div class="card-author-recipe">
+                    <p>por {{recipes.author}}</p>
                 </div>
             </div>
         {% endfor %}
     </section>
+
+    <script src="scripts.js"></script>
+    
 {% endblock %}

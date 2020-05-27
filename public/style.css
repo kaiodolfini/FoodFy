@@ -10,74 +10,65 @@
     border: 0;
     bottom: 0;
 }
-
 body {
     font-family: 'Roboto', sans-serif;
-    background: white;
+    background: white;    
+}
+.wrap{
+    width: 67.1%;
+    min-height: calc(100vh - 70px);
+    margin-left: 16.45%;
+    margin-bottom: 50px;
 }
 
 /*======== HEADER ========*/
-.wrap{
-    width: 67.1%;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
 header {
     width: 100%;
-    height: 100px;
+    height: 93px;
+    box-sizing: border-box;
 }
-
-.logo{
-    width: 120px;
-    position: absolute;
-    top: 40px;
+header > .header {
+    position: relative;
+    
 }
-
-.logo > img{
+header > .header > .logo{
     width: 6.5%;
+    height: 2.4%;
+    float: left;
+    margin-top: 36px;
+    margin-bottom: 30px;
 }
-
-.menu{  
+header > .header > .menu{  
     float: left;  
-    position: absolute;
-    top: 3.8%;
-    left: 20%;
+    margin-top: 38px;
+    margin-left: 122px;
 }
-
-.menu > ul {
+header > .header > .menu > ul {
     list-style: none;
 }
-
-.menu > ul > li{
+header > .header > .menu > ul > li{
     display: inline;
     padding: 15px;
 }
-
-.menu > ul > li > a{
+header > .header > .menu > ul > li > a{
     text-decoration: none;
     color: var(--default-color);
 }
 
 /*======== AS MELHORES RECEITAS ========*/
-.melhores-receitas{
+.wrap > .the-best-recipes{
     position: relative;
     background-color: #FBDFDB;
     width: 100%;
     height: 366px;
     border-radius: 30px;
 }
-
-.melhores-receitas img {
+.wrap > .the-best-recipes > img {
     position: absolute;
     bottom: 0;
-    left: 624px;
+    left: 61%;
 }
-
-.melhores-receitas h1{
+.wrap > .the-best-recipes > h1{
     position: absolute;
     top: 117px;
     left: 60px;
@@ -87,8 +78,7 @@ header {
     line-height: 38px;
     font-weight: bold;
 }
-
-.melhores-receitas p{
+.wrap > .the-best-recipes > p{
     position: absolute;
     top: 165px;
     left: 60px;
@@ -101,165 +91,181 @@ header {
 }
 
 /*======== MAIS ACESSADAS ========*/
-.mais-acessadas{
-    position: relative;
-    left: 0;
-    top: 50px;
-    width: 174px;
-    height: 28px;
+.wrap > .most-accessed{
+    margin-top: 4.5%;
     font-size: 24px;
     line-height: 34px;
     font-weight: bold;
 }
 
-/*======== CARDS ========*/
-.cards-receitas{
+/*======== CARDS/RECIPES ========*/
+.wrap > .cards-recipes{
     width: 100%;
-    margin: 78px auto 73px auto;
+    margin-top: 1.8%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 30px 20px;
 }
-
-.card-imagem-receita img{
-    position: relative;
+.wrap > .cards-recipes > .card > .card-image-recipe > img {
     width: 100%;
+    height: 140px;
     border-radius: 15px;
 }
-
-.card-titulo-receita{
+.wrap > .cards-recipes > .card > .card-title-recipe{
     font-size: 18px;
     color: var(--default-color);
     margin:20px 0 5px 0;
 }
-
-.card-autor-receita{
+.wrap > .cards-recipes > .card > .card-author-recipe{
     font-size: 14px;
     color: #777777;
 }
 
 /*======== SOBRE ========*/
-.sobre{
-    position: relative;
-    padding: 13px 0 20px 0;
-    font-weight: bold;
+.wrap > .about-foodfy {
+    margin-top: 4px;
+}
+.wrap > .about-foodfy > .about-foodfy-title{
     font-size: 24px;
+    margin-bottom: 20px;
     color: var(--default-color);
 }
-.comeco{
-    position: relative;
-    padding: 30px 0 20px 0;
+.wrap .about-begin > .how-started{
     font-weight: bold;
     font-size: 20px;
+    margin-bottom: 20px;
     color: var(--default-color);
 }
-.receitas{
-    position: relative;
-    padding: 30px 0 20px 0;
+.wrap > .about-recipes > .our-recipes{
     font-weight: bold;
     font-size: 20px;
+    margin-bottom: 20px;
     color: var(--default-color);
 }
-.paragrafo1{
-    position: relative;
+ .paragraph{
     padding: 0 0 25px 0;
     font-size: 18px;
-    line-height: 28px;
-    color: #444444;
-}
-.paragrafo2{
-    position: relative;
-    padding: 0 0 10px 0;
-    font-size: 18px;
-    line-height: 28px;
-    color: #444444;
-}
-.paragrafo3{
-    position: relative;
-    padding: 0 0 50px 0px;
-    font-size: 18px;
+    font-weight: normal;
     line-height: 28px;
     color: #444444;
 }
 
-
-/*======== MODAL ========
-
-.modal-overlay{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width:100%;
-    height: 100vh;
-    opacity: 0;
-    visibility: hidden;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 99;
-    transition: all 300ms;
-}
-
-.modal{
-    position: fixed;
-    background-color: rgb(255, 255, 255);
-    width: 660px;
-    height: 413px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/*======== RECIPE ========*/
+.wrap > .recipe-image > img{
+    width: 100%;
+    height: 280px;
     border-radius: 15px;
 }
-
-#fechar{
-    position: absolute;
-    color: #999999;
-    font-size: 16px;
-    line-height: 26px;
-    right: 281px;
-    top: 364px;
-    cursor: pointer;
+.wrap > .recipe-title{
+    margin-top: 50px;
+    margin-left: 50vh;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+}
+.wrap > .recipe-author{
+    color: #777777 ;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 60vh;
 }
 
-/*======== MODAL.ACTIVE ========
-
-.modal-overlay.active{
-    opacity: 1;
-    visibility:visible;
-    transition: all 300ms;
-}
-
-.modal img{
-    position: relative;
-    width: 600px;
-    height: 200px;
-    margin: 30px 30px 20px 30px;
-    border-radius: 15px;
-}
-
-.modal #titulo{
-    position: relative;
-    text-align: center;
-    font-size: 24px;
+/*======== INGREDIENTES ========*/
+.wrap > .ingredients-title{
+    margin-top: 50px;
     line-height: 34px;
-    color: var(--default-color);
 }
-
-.modal #autor{
-    position: relative;
-    text-align: center;
+.wrap > .ingredients-title > ul {
+    list-style: none;
+}
+.wrap > .ingredients-title > ul > li{
+    display: inline;
+}
+.wrap > .ingredients-title > ul > li.title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.wrap > .ingredients-title > ul > li.show-hide{
+    font-size: 12px;
+    font-weight: bold;
+    color: #999999;
+}
+.wrap > .ingredients{
+    margin-top: 20px;
     font-size: 18px;
     line-height: 28px;
-    color: #777777;
+    color: #444444;
+}
+
+/*======== PREPARAÇÃO ========*/
+.wrap > .preparation-title{
+    margin-top: 39px;
+}
+.wrap > .preparation-title > ul {
+    list-style: none;
+}
+.wrap > .preparation-title > ul > li{
+    display: inline;
+}
+.wrap > .preparation-title > ul > li.title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.wrap > .preparation-title > ul > li.show-hide{
+    font-size: 12px;
+    font-weight: bold;
+    color: #999999;
+}
+.wrap > .preparation{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+
+/*======== INFORMAÇÕES ========*/
+.wrap > .information-title{
+    margin-top: 47px;
+}
+.wrap > .information-title > ul {
+    list-style: none;
+}
+.wrap > .information-title > ul > li{
+    display: inline;
+}
+.wrap > .information-title > ul > li.title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.wrap > .information-title > ul > li.show-hide{
+    font-size: 12px;
+    font-weight: bold;
+    color: #999999;
+}
+.wrap > .information{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+
+/*======== HIDDEN ========*/
+.hidden{
+    display: none;
 }
 
 /*======== FOOTER ========*/
 footer{
-    position: relative;
-    bottom: auto;
-    left: auto;
     width: 100%;
+    height: 70px;
     background-color: #EEEEEE;
     padding: 23px 0;
+    box-sizing: border-box;
     text-align: center;
     font-size: 14px;
+    line-height: 24px;
     color: #999999;
 }
