@@ -19,7 +19,7 @@
             <li class="title">
                 Ingredientes
             </li>
-            <li id= "show-ingredients" class="show-hide" onClick="mostrar('ingredients')">
+            <li id="show-ingredients" class="show-hide" data-target="ingredients">
                 MOSTRAR
             </li>
         </ul>
@@ -36,7 +36,7 @@
             <li class="title">
                 Modo de preparo
             </li>
-            <li id= "show-preparation" class="show-hide">
+            <li id="show-preparation" class="show-hide" data-target="preparation">
                 MOSTRAR
             </li>
         </ul>
@@ -53,7 +53,7 @@
             <li class="title">
                 Informações adicionais
             </li>
-            <li id= "show-information" class="show-hide" onClick = "mostrar(information)">
+            <li id="show-information" class="show-hide" data-target="information">
                 MOSTRAR
             </li>
         </ul>
@@ -63,6 +63,6 @@
         <p>{{recipes.information}}</p>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="/scripts.js"></script>
 
 {% endblock %}

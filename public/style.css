@@ -186,10 +186,11 @@ header > .header > .menu > ul > li > a{
     font-weight: bold;
     margin-right: 8px;
 }
-.wrap > .ingredients-title > ul > li.show-hide{
+.wrap ul > li.show-hide{
     font-size: 12px;
     font-weight: bold;
     color: #999999;
+    cursor: pointer;
 }
 .wrap > .ingredients{
     margin-top: 20px;
@@ -213,11 +214,6 @@ header > .header > .menu > ul > li > a{
     font-weight: bold;
     margin-right: 8px;
 }
-.wrap > .preparation-title > ul > li.show-hide{
-    font-size: 12px;
-    font-weight: bold;
-    color: #999999;
-}
 .wrap > .preparation{
     margin-top: 20px;
     font-size: 18px;
@@ -239,11 +235,6 @@ header > .header > .menu > ul > li > a{
     font-size: 24px;
     font-weight: bold;
     margin-right: 8px;
-}
-.wrap > .information-title > ul > li.show-hide{
-    font-size: 12px;
-    font-weight: bold;
-    color: #999999;
 }
 .wrap > .information{
     margin-top: 20px;
